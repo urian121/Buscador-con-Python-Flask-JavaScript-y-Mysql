@@ -39,7 +39,7 @@
   {% block body %}
 
   <div id="RespBusq">
-    <h1 class="text-center"> 
+    <h1 class="text-center">
       Buscador con PYHTON
     </h1>
   </div>
@@ -47,10 +47,8 @@
   {% endblock %}
 
 
-  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="crossorigin="anonymous"></script>
   <script src="{{ url_for('static', filename ='assets/js/home.js') }}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   {% block customJS %}
   <script>
     let formSearch = document.querySelector('#formSearch');
@@ -76,11 +74,11 @@
     /**Función para busqueda*/
     function busqueda(inputValorBuscar) {
       console.log(inputValorBuscar);
-  
-   
-  
 
-    var urlForm = "{{ url_for('BuscarEmpleado') }}";
+
+
+
+      var urlForm = "{{ url_for('BuscarEmpleado') }}";
       $.ajax({
         type: "POST",
         data: { buscar: inputValorBuscar },
@@ -111,6 +109,6 @@
   </script>
   {% endblock %}
 
-</body>
 
+</body>
 </html>

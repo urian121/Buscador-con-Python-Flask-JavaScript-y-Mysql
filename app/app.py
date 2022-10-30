@@ -17,6 +17,7 @@ app.secret_key = '97110c78ae51a45afcb3380af008f90b23a5d1616bf19bc29098105da20fe'
 def inicio():
     return render_template('public/index.html')
       
+      
 #Buscar empleado
 @app.route('/buscar-empleado', methods=['GET','POST'])
 def BuscarEmpleado():
