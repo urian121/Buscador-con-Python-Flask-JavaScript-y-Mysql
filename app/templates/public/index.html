@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +39,7 @@
 
   <div id="RespBusq">
     <h1 class="text-center">
-      Buscador con PYHTON
+      Buscador con <br> PYHTON - JAVASCRIPT Y MYSQL
     </h1>
   </div>
 
@@ -75,9 +74,6 @@
     function busqueda(inputValorBuscar) {
       console.log(inputValorBuscar);
 
-
-
-
       var urlForm = "{{ url_for('BuscarEmpleado') }}";
       $.ajax({
         type: "POST",
@@ -99,7 +95,7 @@
         },
         success: function (resp) {
           console.log(resp);
-          $('#RespBusq').html(resp);
+          document.querySelector('#RespBusq').innerHTML = resp;
         },
         error: function () {
           alert("error petición ajax  😭");
@@ -108,7 +104,6 @@
     }
   </script>
   {% endblock %}
-
 
 </body>
 </html>

@@ -11,7 +11,6 @@ application = app
 app.secret_key = '97110c78ae51a45afcb3380af008f90b23a5d1616bf19bc29098105da20fe'
 
 
-
 #Creando mi Decorador para el Home
 @app.route('/', methods=['GET','POST'])
 def inicio():
